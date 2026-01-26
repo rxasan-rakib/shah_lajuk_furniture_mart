@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture Shop</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <!-- Brand -->
+            <a class="navbar-brand" href="index.html">
+                <img src="images/lajuk_furniture.png" alt="Furniture Shop Logo">
+            </a>
+
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Content -->
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <!-- Navigation Links -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="category.html">Living Room</a></li>
+                            <li><a class="dropdown-item" href="category.html">Bedroom</a></li>
+                            <li><a class="dropdown-item" href="category.html">Dining</a></li>
+                            <li><a class="dropdown-item" href="category.html">Kitchen</a></li>
+                            <li><a class="dropdown-item" href="category.html">Office</a></li>
+                            <li><a class="dropdown-item" href="category.html">Outdoor</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="all_products.html">All Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+
+                <!-- Search Form -->
+                <!-- <form class="d-flex search-form" action="search.html" method="GET">
+                    <input class="form-control me-2" type="search" name="q" placeholder="Search products...">
+                    <button class="btn btn-outline-primary" type="submit">Search</button>
+                </form> -->
+
+                <!-- User Actions -->
+                <div class="d-flex align-items-center ps-2 flex-wrap justify-content-end">
+                    <a href="cart.html" class="btn btn-outline-primary btn-sm me-2 mb-2">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                    <div class="dropdown mb-2 me-2">
+                        <a href="#" class="btn btn-outline-primary btn-sm dropdown-toggle" role="button"
+                            id="accountDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user"></i> My Account
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
+                            <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                            <li><a class="dropdown-item" href="orders.html">My Orders</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="logout.php">Logout</a></li>
+                        </ul>
+                    </div>
+                    <!-- <a href="login.html" class="btn btn-outline-primary btn-sm mb-2">Login</a> -->
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <!-- Contact Header -->
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h1 class="display-4 mb-4">Contact Us</h1>
+                <p class="lead">We'd love to hear from you</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Contact Information -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title mb-4">Get in Touch</h3>
+
+                        <div class="mb-4">
+                            <h5><i class="fas fa-map-marker-alt text-primary me-2"></i> Visit Our Store</h5>
+                            <p>123 Furniture Street<br>City, State 12345<br>United States</p>
+                        </div>
+
+                        <div class="mb-4">
+                            <h5><i class="fas fa-phone text-primary me-2"></i> Call Us</h5>
+                            <p>+1 (234) 567-8900<br>Mon-Sat: 9:00 AM - 6:00 PM</p>
+                        </div>
+
+                        <div class="mb-4">
+                            <h5><i class="fas fa-envelope text-primary me-2"></i> Email Us</h5>
+                            <p>info@furnitureshop.com<br>support@furnitureshop.com</p>
+                        </div>
+
+                        <div class="mb-4">
+                            <h5><i class="fas fa-clock text-primary me-2"></i> Store Hours</h5>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM<br>
+                                Saturday: 10:00 AM - 5:00 PM<br>
+                                Sunday: Closed</p>
+                        </div>
+
+                        <div class="social-links">
+                            <h5 class="mb-3">Follow Us</h5>
+                            <a href="#" class="text-primary me-3"><i class="fab fa-facebook-f fa-2x"></i></a>
+                            <a href="#" class="text-primary me-3"><i class="fab fa-twitter fa-2x"></i></a>
+                            <a href="#" class="text-primary me-3"><i class="fab fa-instagram fa-2x"></i></a>
+                            <a href="#" class="text-primary"><i class="fab fa-pinterest fa-2x"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="col-md-8 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title mb-4">Send Us a Message</h3>
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="name" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" class="form-control" id="subject" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="5" required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Map Section -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body p-0">
+                        <div class="ratio ratio-21x9">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215682579824!2d-73.987844924164!3d40.757978971389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1681234567890!5m2!1sen!2sus"
+                                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <h5>About Us</h5>
+                    <p>We provide high-quality furniture for your home and office. Our mission is to make your living
+                        spaces more comfortable and beautiful.</p>
+                    <div class="social-links d-flex">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="all_products.html" class="text-white">Products</a></li>
+                        <li><a href="about.html" class="text-white">About Us</a></li>
+                        <li><a href="contact.html" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <h5>Categories</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Living Room</a></li>
+                        <li><a href="#" class="text-white">Bedroom</a></li>
+                        <li><a href="#" class="text-white">Dining</a></li>
+                        <li><a href="#" class="text-white">Office</a></li>
+                        <li><a href="#" class="text-white">Outdoor</a></li>
+                    </ul>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <h5>Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> 123 Furniture Street, City</li>
+                        <li><i class="fas fa-phone me-2"></i> +1 234 567 890</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@furnitureshop.com</li>
+                        <li><i class="fas fa-clock me-2"></i> Mon-Sat: 9:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row justify-content-center">
+                <div class="col-xl-6 col-lg-8 col-md-10 col-sm-12">
+                    <p class="mb-0">&copy;
+                        <?php echo date('Y'); ?> Furniture Shop. All rights reserved.
+                    </p>
+                </div>
+                <div class="col-xl-6 col-lg-4 col-md-10 col-sm-12 text-md-end">
+                    <a href="privacy.php" class="text-white me-3">Privacy Policy</a>
+                    <a href="terms.php" class="text-white">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize Bootstrap dropdowns
+            var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'));
+            dropdownElementList.map(function (dropdownToggleEl) {
+                return new bootstrap.Dropdown(dropdownToggleEl);
+            });
+
+            // Mobile menu handling
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            const navbarToggler = document.querySelector('.navbar-toggler');
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function (event) {
+                if (window.innerWidth < 992 &&
+                    navbarCollapse.classList.contains('show') &&
+                    !navbarCollapse.contains(event.target) &&
+                    !navbarToggler.contains(event.target)) {
+                    navbarToggler.click();
+                }
+            });
+
+            // Close mobile menu when clicking a nav link
+            const navLinks = document.querySelectorAll('.navbar-nav .nav-link:not(.dropdown-toggle)');
+            navLinks.forEach(function (link) {
+                link.addEventListener('click', function () {
+                    if (window.innerWidth < 992) {
+                        navbarToggler.click();
+                    }
+                });
+            });
+
+            // Quantity increment/decrement functionality
+            function initializeQuantityControls() {
+                const quantityInput = document.getElementById('quantity');
+                const decreaseBtn = document.getElementById('decreaseQuantity');
+                const increaseBtn = document.getElementById('increaseQuantity');
+
+                if (!quantityInput || !decreaseBtn || !increaseBtn) return;
+
+                decreaseBtn.onclick = function () {
+                    const currentValue = parseInt(quantityInput.value);
+                    if (currentValue > 1) {
+                        quantityInput.value = currentValue - 1;
+                    }
+                };
+
+                increaseBtn.onclick = function () {
+                    const currentValue = parseInt(quantityInput.value);
+                    quantityInput.value = currentValue + 1;
+                };
+            }
+
+            // Initialize quantity controls if they exist on the page
+            initializeQuantityControls();
+        });
+    </script>
+</body>
+
+</html>

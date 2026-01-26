@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shah Lajuk Furniture Mart - Admin Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main CSS file -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Mobile Header (only visible on mobile) -->
+        <div class="mobile-header d-md-none">
+            <button type="button" id="sidebarCollapse" class="btn">
+                <i class="fa fa-bars"></i>
+            </button>
+            <!-- <h4 class="mobile-title">Furniture Zone</h4> -->
+            <img src="../images/lajuk_furniture.png" alt="" style="width: 200px;">
+        </div>
+
+        <!-- Overlay div for sidebar -->
+        <div class="overlay"></div>
+
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <img src="../images/lajuk_furniture.png" alt="" style="width: 200px;">
+            </div>
+
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="index.html"><i class="fa-solid fa-house-chimney"></i> Dashboard</a>
+                </li>
+                <li>
+                    <a href="admin.html"><i class="fa-solid fa-user"></i> User Management</a>
+                </li>
+                <li>
+                    <a href="users.html"><i class="fa-solid fa-users"></i> Customers</a>
+                </li>
+                <li>
+                    <a href="all_furniture.html"><i class="fa-solid fa-couch"></i> Furnitures</a>
+                </li>
+                <li>
+                    <a href="manual_sales.html"><i class="fas fa-regular fa-hand-holding-dollar"></i> Manual Sales</a>
+                </li>
+                <li>
+                    <a href="expense.html"><i class="fas fa-donate"></i> Expense</a>
+                </li>
+                
+
+                <li class="category-header">
+                    <span>ORDER MANAGEMENT</span>
+                </li>
+                <li>
+                    <a href="all_order.html"><i class="fas fa-regular fa-cart-shopping"></i></i> All Order</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-solid fa-hourglass-half"></i> Pending Order</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-regular fa-square-check"></i> Accept Order</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-solid fa-ban"></i> Cancel Order</a>
+                </li>
+
+                <li class="category-header">
+                    <span>WEBSITE CONTENT</span>
+                </li>
+
+                <li>
+                    <a href="banner.html"><i class="fa-solid fa-images"></i> Banner</a>
+                </li>
+                <li>
+                    <a href="shop_info.html"><i class="fas fa-regular fa-circle-info"></i> Shop Inofrmation</a>
+                </li>
+            </ul>
+
+            <div class="sidebar-footer">
+                <button class="btn btn-logout">Logout</button>
+            </div>
+        </nav>
+
+        <!-- Page Content -->
+        <div id="content">
+            <!-- Header -->
+            <header class="header">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <div class="breadcrumb-area">
+                                <h5 class="dashboard-title">Dashboard Overview</h5>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="d-flex align-items-center">
+                                <!-- Notification Dropdown -->
+                                <div class="dropdown notification-dropdown me-3">
+                                    <button class="notification-btn" type="button"
+                                        id="notificationBtn" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fas fa-bell"></i>
+                                        <span class="notification-badge">3</span>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-end">
+                                        <div class="notification-header">
+                                            <h6>Notifications</h6>
+                                        </div>
+                                        <div class="notification-item">
+                                            <div class="notification-icon">
+                                                <i class="fas fa-shopping-cart"></i>
+                                            </div>
+                                            <div class="notification-content">
+                                                <p class="notification-text">New order #1234 received</p>
+                                                <small class="notification-time">2 minutes ago</small>
+                                            </div>
+                                        </div>
+                                        <div class="notification-item">
+                                            <div class="notification-icon">
+                                                <i class="fas fa-shopping-cart"></i>
+                                            </div>
+                                            <div class="notification-content">
+                                                <p class="notification-text">New order #1233 received</p>
+                                                <small class="notification-time">1 hour ago</small>
+                                            </div>
+                                        </div>
+                                        <div class="notification-footer">
+                                            <a href="#" class="view-all">View all notifications</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- User Profile Dropdown -->
+                                <div class="user-profile dropdown">
+                                    <button class="btn btn-outline-primary dropdown-toggle d-flex align-items-center"
+                                        type="button" id="accountDropdown" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <i class="fas fa-user-circle me-2"></i>
+                                        <span class="d-none d-md-inline">MD.RAKIBUL HASAN RAKIB</span>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
+                                        <li><a class="dropdown-item" href="#"><i
+                                                    class="fas fa-user me-2"></i>Profile</a></li>
+                                        <li><a class="dropdown-item" href="#"><i
+                                                    class="fas fa-cog me-2"></i>Settings</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="container-fluid dashboard-content">
+                <!-- Stats Cards -->
+                <div class="row g-4 mb-4">
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="card stat-card border-start-0 border-end-0 border-top-0 border-bottom-0">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h6 class="card-subtitle mb-0">Total Revenue</h6>
+                                    <div class="icon-shape bg-light-primary rounded-3 p-2">
+                                        <i class="fas fa-dollar-sign text-primary fs-4 text-primary"></i>
+                                    </div>
+                                </div>
+                                <h2 class="card-title mb-0">$24,780</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="card stat-card border-start-0 border-end-0 border-top-0 border-bottom-0">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h6 class="card-subtitle mb-0">Total Orders</h6>
+                                    <div class="icon-shape bg-light-warning rounded-3 p-2">
+                                        <i class="fas fa-shopping-cart text-warning fs-4 text-primary"></i>
+                                    </div>
+                                </div>
+                                <h2 class="card-title mb-0">1,245</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="card stat-card border-start-0 border-end-0 border-top-0 border-bottom-0">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h6 class="card-subtitle mb-0">New Customers</h6>
+                                    <div class="icon-shape bg-light-success rounded-3 p-2">
+                                        <i class="fas fa-users text-success fs-4 text-primary"></i>
+                                    </div>
+                                </div>
+                                <h2 class="card-title mb-0">324</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="card stat-card border-start-0 border-end-0 border-top-0 border-bottom-0">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h6 class="card-subtitle mb-0">Conversion</h6>
+                                    <div class="icon-shape bg-light-info rounded-3 p-2">
+                                        <i class="fas fa-percentage text-info fs-4 text-primary"></i>
+                                    </div>
+                                </div>
+                                <h2 class="card-title mb-0">3.42%</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Orders -->
+                <div class="card mb-4">
+                    <div class="card-header bg-white border-0 border-bottom py-3 d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">RECENT ORDERS</h5>
+                        <a href="#" class="btn btn-sm btn-outline-primary">View All</a>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-hover mb-0">
+                                <thead class="bg-light">
+                                    <tr>
+                                        <th>Order ID</th>
+                                        <th>Customer</th>
+                                        <th>Product</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                        <th>Date</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#ORD-7841</td>
+                                        <td>John Doe</td>
+                                        <td>Modern Sofa</td>
+                                        <td>$1,299</td>
+                                        <td><span class="badge bg-success bg-opacity-10 text-success">Delivered</span>
+                                        </td>
+                                        <td>24 Jan 2024</td>
+                                        <td><a href="#" class="btn btn-sm btn-light">View</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#ORD-7830</td>
+                                        <td>Jane Smith</td>
+                                        <td>Dining Table Set</td>
+                                        <td>$2,499</td>
+                                        <td><span class="badge bg-warning bg-opacity-10 text-warning">Processing</span>
+                                        </td>
+                                        <td>23 Jan 2024</td>
+                                        <td><a href="#" class="btn btn-sm btn-light">View</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#ORD-7821</td>
+                                        <td>Robert Johnson</td>
+                                        <td>King Size Bed</td>
+                                        <td>$1,799</td>
+                                        <td><span class="badge bg-info bg-opacity-10 text-info">Shipped</span></td>
+                                        <td>22 Jan 2024</td>
+                                        <td><a href="#" class="btn btn-sm btn-light">View</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="text-center">
+                        <p class="mb-0">@copy 2026 | Shah Lajuk Furniture Mart. All rights reserved.</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="js/custom.js"></script>
+</body>
+
+</html>

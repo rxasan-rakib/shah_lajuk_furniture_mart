@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture Shop</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <!-- Brand -->
+            <a class="navbar-brand" href="index.html">
+                <img src="images/lajuk_furniture.png" alt="Furniture Shop Logo">
+            </a>
+
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Content -->
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <!-- Navigation Links -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="category.html">Living Room</a></li>
+                            <li><a class="dropdown-item" href="category.html">Bedroom</a></li>
+                            <li><a class="dropdown-item" href="category.html">Dining</a></li>
+                            <li><a class="dropdown-item" href="category.html">Kitchen</a></li>
+                            <li><a class="dropdown-item" href="category.html">Office</a></li>
+                            <li><a class="dropdown-item" href="category.html">Outdoor</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="all_products.html">All Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+
+                <!-- Search Form -->
+                <!-- <form class="d-flex search-form" action="search.html" method="GET">
+                    <input class="form-control me-2" type="search" name="q" placeholder="Search products...">
+                    <button class="btn btn-outline-primary" type="submit">Search</button>
+                </form> -->
+
+                <!-- User Actions -->
+                <div class="d-flex align-items-center ps-2 flex-wrap justify-content-end">
+                    <a href="cart.html" class="btn btn-outline-primary btn-sm me-2 mb-2">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                    <div class="dropdown mb-2 me-2">
+                        <a href="#" class="btn btn-outline-primary btn-sm dropdown-toggle" role="button"
+                            id="accountDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user"></i> My Account
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
+                            <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                            <li><a class="dropdown-item" href="orders.html">My Orders</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="logout.php">Logout</a></li>
+                        </ul>
+                    </div>
+                    <!-- <a href="login.html" class="btn btn-outline-primary btn-sm mb-2">Login</a> -->
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <!-- Category Header -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <h1 class="text-center mb-3">Category_title Collection</h1>
+                <p class="text-center text-muted">Discover our premium selection of category_title furniture</p>
+            </div>
+        </div>
+
+        <!-- Category Description -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">About Our Category_title Collection</h5>
+                        <p class="card-text">
+                            'living-room' => 'Transform your living space with our carefully curated collection of
+                            living
+                            room furniture. From comfortable sofas to stylish coffee tables, find everything you need to
+                            create a welcoming and functional living area.',
+                            'bedroom' => 'Create your perfect sanctuary with our bedroom furniture collection. Discover
+                            beds, dressers, and nightstands designed for both style and comfort, helping you achieve the
+                            bedroom of your dreams.',
+                            'dining' => 'Elevate your dining experience with our collection of dining room furniture.
+                            From
+                            elegant dining sets to practical storage solutions, find pieces that combine functionality
+                            with
+                            timeless design.',
+                            'office' => 'Enhance your productivity with our office furniture collection. Featuring
+                            ergonomic
+                            chairs, spacious desks, and practical storage solutions, create a workspace that inspires
+                            creativity and efficiency.',
+                            'outdoor' => 'Extend your living space outdoors with our collection of outdoor furniture.
+                            Designed to withstand the elements while maintaining style and comfort, perfect for creating
+                            your ideal outdoor retreat.'
+                            <br>
+                            Category descriptions
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card product-card h-100">
+                    <img src="images/pexels-eric-mufasa-578798-1350789.jpg" class="card-img-top" alt="Product name">
+                    <div class="card-body">
+                        <h5 class="card-title">Product Name</h5>
+                        <p class="card-text">Product Description</p>
+                        <p class="price">$ Product Price</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="product.php" class="btn btn-outline-primary">View
+                                Details</a>
+                            <button class="btn btn-primary add-to-cart" data-id="">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category Features -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <h3 class="text-center mb-4">Why Choose Our Category_title Furniture?</h3>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="text-center">
+                            <i class="fas fa-star fa-3x text-primary mb-3"></i>
+                            <h5>Premium Quality</h5>
+                            <p>Made with high-quality materials and expert craftsmanship</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="text-center">
+                            <i class="fas fa-truck fa-3x text-primary mb-3"></i>
+                            <h5>Free Shipping</h5>
+                            <p>Free delivery on all orders over $500</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="text-center">
+                            <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
+                            <h5>Warranty</h5>
+                            <p>1-year warranty on all furniture</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <h5>About Us</h5>
+                    <p>We provide high-quality furniture for your home and office. Our mission is to make your living
+                        spaces more comfortable and beautiful.</p>
+                    <div class="social-links d-flex">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="all_products.html" class="text-white">Products</a></li>
+                        <li><a href="about.html" class="text-white">About Us</a></li>
+                        <li><a href="contact.html" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <h5>Categories</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Living Room</a></li>
+                        <li><a href="#" class="text-white">Bedroom</a></li>
+                        <li><a href="#" class="text-white">Dining</a></li>
+                        <li><a href="#" class="text-white">Office</a></li>
+                        <li><a href="#" class="text-white">Outdoor</a></li>
+                    </ul>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <h5>Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> 123 Furniture Street, City</li>
+                        <li><i class="fas fa-phone me-2"></i> +1 234 567 890</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@furnitureshop.com</li>
+                        <li><i class="fas fa-clock me-2"></i> Mon-Sat: 9:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row justify-content-center">
+                <div class="col-xl-6 col-lg-8 col-md-10 col-sm-12">
+                    <p class="mb-0">&copy;
+                        <?php echo date('Y'); ?> Furniture Shop. All rights reserved.
+                    </p>
+                </div>
+                <div class="col-xl-6 col-lg-4 col-md-10 col-sm-12 text-md-end">
+                    <a href="privacy.php" class="text-white me-3">Privacy Policy</a>
+                    <a href="terms.php" class="text-white">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize Bootstrap dropdowns
+            var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'));
+            dropdownElementList.map(function (dropdownToggleEl) {
+                return new bootstrap.Dropdown(dropdownToggleEl);
+            });
+
+            // Mobile menu handling
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            const navbarToggler = document.querySelector('.navbar-toggler');
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function (event) {
+                if (window.innerWidth < 992 &&
+                    navbarCollapse.classList.contains('show') &&
+                    !navbarCollapse.contains(event.target) &&
+                    !navbarToggler.contains(event.target)) {
+                    navbarToggler.click();
+                }
+            });
+
+            // Close mobile menu when clicking a nav link
+            const navLinks = document.querySelectorAll('.navbar-nav .nav-link:not(.dropdown-toggle)');
+            navLinks.forEach(function (link) {
+                link.addEventListener('click', function () {
+                    if (window.innerWidth < 992) {
+                        navbarToggler.click();
+                    }
+                });
+            });
+
+            // Quantity increment/decrement functionality
+            function initializeQuantityControls() {
+                const quantityInput = document.getElementById('quantity');
+                const decreaseBtn = document.getElementById('decreaseQuantity');
+                const increaseBtn = document.getElementById('increaseQuantity');
+
+                if (!quantityInput || !decreaseBtn || !increaseBtn) return;
+
+                decreaseBtn.onclick = function () {
+                    const currentValue = parseInt(quantityInput.value);
+                    if (currentValue > 1) {
+                        quantityInput.value = currentValue - 1;
+                    }
+                };
+
+                increaseBtn.onclick = function () {
+                    const currentValue = parseInt(quantityInput.value);
+                    quantityInput.value = currentValue + 1;
+                };
+            }
+
+            // Initialize quantity controls if they exist on the page
+            initializeQuantityControls();
+        });
+    </script>
+</body>
+
+</html>
