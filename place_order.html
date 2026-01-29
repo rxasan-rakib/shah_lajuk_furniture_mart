@@ -62,12 +62,6 @@
                     </li>
                 </ul>
 
-                <!-- Search Form -->
-                <!-- <form class="d-flex search-form" action="search.html" method="GET">
-                    <input class="form-control me-2" type="search" name="q" placeholder="Search products...">
-                    <button class="btn btn-outline-primary" type="submit">Search</button>
-                </form> -->
-
                 <!-- User Actions -->
                 <div class="d-flex align-items-center ps-2 flex-wrap justify-content-end">
                     <a href="cart.html" class="btn btn-outline-primary btn-sm me-2 mb-2">
@@ -93,40 +87,69 @@
         </div>
     </nav>
 
-    <!-- Products Section -->
-    <div class="container py-5">
-        <h1 class="text-center mb-5">All Products</h1>
-        <div class="row" id="productsGrid">
-            <div class="col-md-4 mb-4">
-                <div class="card product-card h-100">
-                    <div class="position-relative">
-                        <img src="./images/pexels-eric-mufasa-578798-1350789.jpg" class="card-img-top" alt="Product Image">
-                        <span class="position-absolute top-0 end-0 badge bg-danger rounded-pill mt-3 me-4 px-3 py-1">
-                            Available
-                        </span>
+    <!-- Success Container -->
+    <div class="place-order-container">
+        <div class="place-order-card">
+            <!-- Two Column Content -->
+            <div class="place-order-content">
+                <!-- Left Column - Success Icon & Message -->
+                <div class="place-order-left">
+                    <!-- Success Icon -->
+                    <div class="place-order-icon">
+                        <div class="place-order-circle">
+                            <i class="fas fa-check place-order-checkmark"></i>
+                        </div>
                     </div>
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">
-                            Product Name
-                        </h5>
-                        <h6 class="price text-danger">
-                            Product Price
-                        </h6>
-                        <p class="card-text flex-grow-1">
-                            Product Description
-                        </p>
-                        <a href="product_details.html" class="btn btn-danger mt-3">Order Now</a>
+
+                    <!-- Success Message -->
+                    <div>
+                        <h1 class="place-order-title">Order Placed Successfully!</h1>
+                        <p class="place-order-message">Thank you for your purchase. Your order has been confirmed and
+                            will be delivered soon.</p>
+                    </div>
+                </div>
+
+                <!-- Right Column - Order Info & Actions -->
+                <div class="place-order-right">
+                    <!-- Order Information -->
+                    <div class="place-order-info">
+                        <div class="place-order-number">ORDER INFORMATION</div>
+                        <div class="place-order-number">#SLFM2026012901</div>
+                        <div class="place-order-details">
+                            <i class="fas fa-calendar me-2"></i>Placed on January 29, 2026
+                        </div>
+                        <div class="place-order-details">
+                            <i class="fas fa-truck me-2"></i>Estimated delivery: 3-5 business days
+                        </div>
+                        <div class="place-order-details">
+                            <i class="fas fa-envelope me-2"></i>Confirmation sent to your email
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="place-order-buttons">
+                        <a href="index.html" class="place-order-btn-continue">
+                            <i class="fas fa-shopping-bag"></i>
+                            Continue Shopping
+                        </a>
+                        <a href="#" class="place-order-btn-track" onclick="trackOrder(); return false;">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Track Order
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Confetti Container -->
+    <div class="place-order-confetti-container" id="confettiContainer"></div>
+
     <!-- Footer -->
     <footer class="bg-dark text-white py-5">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 mb-4">
                     <h5>About Us</h5>
                     <p>We provide high-quality furniture for your home and office. Our mission is to make your living
                         spaces more comfortable and beautiful.</p>
@@ -137,7 +160,7 @@
                         <a href="#" class="text-white"><i class="fab fa-pinterest"></i></a>
                     </div> -->
                 </div>
-                <div class="col-xl-2 col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 mb-4">
                     <h5>Quick Links</h5>
                     <ul class="list-unstyled">
                         <li><a href="index.html" class="text-white">Home</a></li>
@@ -146,7 +169,7 @@
                         <li><a href="contact.html" class="text-white">Contact</a></li>
                     </ul>
                 </div>
-                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 mb-4">
                     <h5>Categories</h5>
                     <ul class="list-unstyled">
                         <li><a href="#" class="text-white">Living Room</a></li>
@@ -156,7 +179,7 @@
                         <li><a href="#" class="text-white">Outdoor</a></li>
                     </ul>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 mb-4">
                     <h5>Contact Info</h5>
                     <ul class="list-unstyled">
                         <li><i class="fas fa-map-marker-alt me-2"></i> 123 Furniture Street, City</li>
@@ -169,13 +192,11 @@
             <hr class="my-4">
             <div class="row justify-content-center">
                 <div class="col-xl-6 col-lg-8 col-md-10 col-sm-12">
-                    <p class="mb-0">&copy;
-                        <?php echo date('Y'); ?> Furniture Shop. All rights reserved.
-                    </p>
+                    <p class="mb-0">&copy; 2026 | Furniture Shop. All rights reserved. </p>
                 </div>
                 <div class="col-xl-6 col-lg-4 col-md-10 col-sm-12 text-md-end">
-                    <a href="privacy.php" class="text-white me-3">Privacy Policy</a>
-                    <a href="terms.php" class="text-white">Terms of Service</a>
+                    <a href="#" class="text-white me-3">Privacy Policy</a>
+                    <a href="#" class="text-white">Terms of Service</a>
                 </div>
             </div>
         </div>
@@ -183,8 +204,76 @@
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JavaScript -->
     <script src="js/custom.js"></script>
+
+    <!-- Success Page JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Start continuous confetti for 5 seconds
+            startContinuousConfetti();
+
+            // Stop confetti after 5 seconds
+            setTimeout(() => {
+                stopConfetti();
+            }, 5000);
+        });
+
+        let confettiInterval;
+        let confettiCount = 0;
+        const maxConfetti = 100; // Maximum confetti particles at any time
+
+        function startContinuousConfetti() {
+            const container = document.getElementById('confettiContainer');
+            const colors = ['#B13413', '#7E786C', '#28a745', '#20c997', '#ffc107', '#17a2b8'];
+
+            // Create confetti every 100ms for continuous stream
+            confettiInterval = setInterval(() => {
+                if (confettiCount < maxConfetti) {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'place-order-confetti';
+                    confetti.style.left = Math.random() * 100 + '%';
+                    confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+                    confetti.style.width = '8px';
+                    confetti.style.height = '8px';
+                    confetti.style.borderRadius = '50%';
+                    confetti.style.position = 'absolute';
+                    confetti.style.pointerEvents = 'none';
+                    confetti.style.zIndex = '9999';
+
+                    // Random animation duration between 2-4 seconds
+                    const duration = Math.random() * 2 + 2;
+                    confetti.style.animation = `place-order-confetti-stream ${duration}s linear forwards`;
+                    container.appendChild(confetti);
+                    confettiCount++;
+
+                    // Remove confetti element immediately after animation completes
+                    setTimeout(() => {
+                        if (confetti.parentNode) {
+                            confetti.remove();
+                            confettiCount--;
+                        }
+                    }, duration * 1000);
+                }
+            }, 100);
+        }
+
+        function stopConfetti() {
+            clearInterval(confettiInterval);
+
+            // Clear remaining confetti after a short delay
+            setTimeout(() => {
+                const container = document.getElementById('confettiContainer');
+                container.innerHTML = '';
+                confettiCount = 0;
+            }, 3000);
+        }
+
+        function trackOrder() {
+            // In a real application, this would redirect to order tracking page
+            // For now, show an alert
+            alert('Order tracking feature coming soon! You will receive tracking details via email.');
+        }
+    </script>
 </body>
 
 </html>
